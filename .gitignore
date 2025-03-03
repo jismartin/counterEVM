@@ -1,3 +1,4 @@
 # Ignoring directories
 /deprecated
 /references
+.DS_Store
