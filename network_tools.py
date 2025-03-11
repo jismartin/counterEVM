@@ -116,20 +116,23 @@ def visualize_dag(G: nx.DiGraph, figsize: Tuple[int, int] = (8, 6)) -> None:
     if not nx.is_directed_acyclic_graph(G):
         raise ValueError("The provided graph is not a Directed Acyclic Graph (DAG).")
 
+    # Create a copy of the graph to avoid modifying the original
+    G0=G.copy()
+
     # Compute a hierarchical layout for better visualization of DAGs
-    lorder = list(nx.topological_sort(G))
+    lorder = list(nx.topological_sort(G0))
     
     # Compute progressive levels (PL)
-    Plevels = {node: 0 for node in G.nodes}
+    Plevels = {node: 0 for node in G0.nodes}
     for node in lorder[1:-1]:  # Skip start and end
-        Plevels[node] = 1 + max((Plevels[p] for p in G.predecessors(node)), default=0)
-    Plevels[max(G.nodes())] = max(Plevels.values()) + 1
-    nx.set_node_attributes(G, Plevels, "subset")
-    pos = nx.drawing.layout.multipartite_layout(G, subset_key='subset')
+        Plevels[node] = 1 + max((Plevels[p] for p in G0.predecessors(node)), default=0)
+    Plevels[max(G0.nodes())] = max(Plevels.values()) + 1
+    nx.set_node_attributes(G0, Plevels, "subset")
+    pos = nx.drawing.layout.multipartite_layout(G0, subset_key='subset')
 
     # Draw the graph
     plt.figure(figsize=figsize)
-    nx.draw(G, pos, with_labels=True, node_color="lightblue", alpha=0.7, edge_color="gray", arrows=True)
+    nx.draw(G0, pos, with_labels=True, node_color="lightblue", alpha=0.7, edge_color="gray", arrows=True)
     plt.show()
 
 
