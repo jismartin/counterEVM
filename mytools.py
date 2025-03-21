@@ -99,6 +99,8 @@ def pert_sample(optimistic: float, most_probable: float, pessimistic: float, ela
 
 # Draw random durations for the activities following a PERT distribution
 def draw_random_durations(G,control=None,pert_sample=pert_sample):
+    #Control is a df with the following columns: ActualDuration, PercentageCompleted
+    
     nx.set_node_attributes(G,0,'duration')
     if control is None:
         for n in list(G.nodes())[1:-1]: # Skip the start and end nodes
