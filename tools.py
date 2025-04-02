@@ -103,10 +103,10 @@ def draw_random_durations(G,control=None,pert_sample=pert_sample):
     
     nx.set_node_attributes(G,0,'duration')
     if control is None:
-        for n in list(G.nodes())[1:-1]: # Skip the start and end nodes
+        for n in list(G.nodes()): 
             G.nodes[n]['duration']=pert_sample(G.nodes[n]['optimistic'], G.nodes[n]['mostlikely'], G.nodes[n]['pessimistic'],size=1)[0]
     else:
-        for n in control.index[1:-1]: # Skip the start and end nodes
+        for n in control.index: 
           
             if control.loc[n,'PercentageCompleted']==1: # completed activity
                 G.nodes[n]['duration']=control.loc[n,'ActualDuration'] # the duration is the actual duration
@@ -138,7 +138,7 @@ def compute_times(G,time='duration'):
 
 def find_critical_path(G, time='duration'):
     # Compute the start and finish times
-    start_time, finish_time = compute_times(G, time)  # Assume function is correctly implemented
+    start_time, finish_time = compute_times(G, time)  
 
     # Identify the unique end node using topological sorting
     topo_order = list(nx.topological_sort(G))
