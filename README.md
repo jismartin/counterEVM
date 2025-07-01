@@ -52,3 +52,4 @@ This project is licensed under the **MIT License**. See the LICENSE file for det
 
 ## 🧑‍🤝‍🧑 Acknowledgements
 
+The authors would like to express their gratitude for the support and funding provided by the Ministry of Science and Innovation through its excellence network RED2022-134890-T, the project PID2020118906GB-I00, and the MOMENTUM program project MMT24-IMF-02. We acknowledge Santander Supercomputación support group at the University of Cantabria who provided access to the supercomputer Altamira Supercomputer at the Institute of Physics of Cantabria (IFCA-CSIC), member of the Spanish Supercomputing Network, for performing simulations/analyses.
