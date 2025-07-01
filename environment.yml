@@ -1,0 +1,21 @@
+name: counterevm-env
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - networkx
+  - matplotlib
+  - seaborn
+  - scipy
+  - scikit-learn
+  - tensorflow
+  - keras
+
+
+# If you ever need PyPI-only packages, you can uncomment a pip section:
+#  - pip:
+#      - some-package

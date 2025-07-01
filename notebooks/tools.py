@@ -177,6 +177,6 @@ def simulation(G,project_name,experiment,control=None,Nruns=10000,echo=False):
         if echo: print(m)
     if echo: print('... end simulation')
 
-    if not os.path.exists('./data/'+project_name):
-        os.makedirs('./data/'+project_name)
-    pd.DataFrame.from_dict(sim_list).to_csv('./data/'+project_name+'/simulation_'+project_name+'_' + experiment+ '.csv')
+    if not os.path.exists('../sim_data/'+project_name):
+        os.makedirs('../sim_data/'+project_name)
+    pd.DataFrame.from_dict(sim_list).to_csv('../sim_data/'+project_name+'/simulation_'+project_name+'_' + experiment+ '.csv')
