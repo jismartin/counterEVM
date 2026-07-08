@@ -2,9 +2,9 @@
 
 This repository contains all code, data, and notebooks to reproduce the results of:
 
-> Pereda, M., Santos, J. I., Ahedo, V. & Galán, J. M. (2025).
+> Pereda, M., Santos, J. I., Ahedo, V. & Galán, J. M.
 > *Actionable decision-making in project management control using counterfactual explanations*
-> **X**(Y): ZZ–ZZ. [PDF](https://…)
+> (manuscript under review)
 
 ## 🧠 Summary
 

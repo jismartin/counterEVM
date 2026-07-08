@@ -2,3 +2,4 @@
 /deprecated
 /references
 .DS_Store
+.venv

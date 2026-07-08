@@ -4,18 +4,18 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.10
-  - numpy
-  - pandas
-  - networkx
-  - matplotlib
+  - python=3.12
+  - numpy=1.26.4
+  - pandas=1.5.3
+  - networkx=3.4.2
+  - matplotlib=3.10.0
   - seaborn
-  - scipy
-  - scikit-learn
-  - tensorflow
-  - keras
-
-
-# If you ever need PyPI-only packages, you can uncomment a pip section:
-#  - pip:
-#      - some-package
+  - scipy=1.15.1
+  - scikit-learn=1.4.1
+  - tensorflow=2.18.0
+  - keras=3.8.0
+  - joblib=1.4.2
+  - pip
+  - pip:
+      - dice_ml==0.11
+      - shap
