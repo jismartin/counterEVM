@@ -17,19 +17,23 @@ This repository contains all code, data, and results supporting the paper on a n
 ├── figures/                                # Pre-rendered figures for the manuscript
 ├── input_data/                             # Input dataset of the Fuel Tank Filter project
 ├── models/
-│   └── gbc_best_model.pkl                  # Gradient Boosting model selected to generate CFs 
+│   └── gbc_best_model.pkl                  # Gradient Boosting model selected to generate CFs (TP1)
+│   └── gbc_tp2_model.pkl                   # Gradient Boosting model retrained on TP2 data
 │   └── tf_best_model.keras                 # Tensor Flow model selected to generate CFs  
 ├── notebooks/
+│   ├── applicability_tracking_points.ipynb # Applicability of CFs across tracking points (TP1 vs. TP2)
 │   ├── cfs_generation.ipynb                # Generation and interpretation of CFs
 │   ├── model_selection.ipynb               # Selection of models for CFs analysis
 │   ├── monte_carlo_simulation.ipynb        # Generation of the simulation data at the EV
 │   ├── pert_sample.ipynb                   # Checking the Pert beta distribution
 │   ├── plots.ipynb                         # Generation of some figures
+│   ├── robustness_analysis.ipynb           # SHAP-naive baseline and alpha/beta sensitivity analysis
 │   ├── selection_of_instance.ipynb         # Selection of instances for CFs analysis
 │   ├── tools.py                            # Set of functions used in all notebooks
 
 ├── sim_data/                               # Simulation and other results
 ├── environment.yml                         # Conda environment specification
+├── requirements.txt                        # Pip requirements (pinned versions)
 ├── LICENSE                                 # MIT License
 └── README.md                               # This file
 ```
