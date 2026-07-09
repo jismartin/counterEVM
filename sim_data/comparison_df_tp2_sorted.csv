@@ -1,0 +1,6 @@
+CF_ID,cost,method,sparsity
+1,1590501.4125359256,Genetic,1
+2,1591102.936171672,MA - Random,0.1 linear
+3,1592409.169217623,MA - Random,0.1 linear
+4,1594751.464761631,MA - Random,0.1 linear
+5,1594890.9151770778,MA - Random,0.1 linear
